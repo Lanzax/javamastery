@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Maven / Java
+api/target/
+api/.idea/
+*.iml
+
+# Node
+app/node_modules/
+app/dist/
+
+# Logs
+*.log
+
+# Env
+*.env

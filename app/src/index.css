@@ -1,0 +1,7 @@
+@import "./theme.css";
+@import "tailwindcss";
+
+/* Applica Inter come font globale */
+body {
+  @apply font-sans;
+}

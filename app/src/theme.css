@@ -1,0 +1,30 @@
+:root {
+  --bg:#0f172a; --card:#111827; --panel:#1f2937;
+  --fg:#e5e7eb; --muted:#9ca3af; --border:#283246;
+  --primary:#3b82f6; --success:#22c55e; --warning:#f59e0b; --violet:#8b5cf6;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+.theme-card   { background: var(--card); border:1px solid var(--border); border-radius:16px; }
+.theme-panel  { background: var(--panel); border:1px solid var(--border); border-radius:16px; }
+.theme-muted  { color: var(--muted); }
+.theme-link   { color: var(--primary); }
+.theme-border { border-color: var(--border); }
+
+.theme-input {
+  background: transparent; border:1px solid var(--border); color: var(--fg);
+}
+.theme-input::placeholder {
+  color: color-mix(in oklab, var(--muted) 80%, var(--fg));
+}
+.theme-input:focus {
+  outline: none; border-color: var(--primary);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 25%, transparent);
+}
+.theme-btn { background: var(--primary); color: white; }
+.theme-btn:hover { filter: brightness(.95); }

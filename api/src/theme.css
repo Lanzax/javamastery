@@ -1,0 +1,45 @@
+:root {
+  /* Palette dark stile mockup */
+  --bg:      #0f172a;  /* sfondo principale */
+  --card:    #111827;  /* blocchi/scaffold */
+  --panel:   #1f2937;  /* card più chiare */
+  --fg:      #e5e7eb;  /* testo */
+  --muted:   #9ca3af;  /* testo secondario */
+  --border:  #283246;  /* bordi */
+  --primary: #3b82f6;  /* blu accento */
+  --success: #22c55e;  /* verde */
+  --warning: #f59e0b;  /* arancio/giallo */
+  --violet:  #8b5cf6;  /* viola badge */
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* Utility semantiche riusabili */
+.theme-card   { background: var(--card); border: 1px solid var(--border); border-radius: 16px; }
+.theme-panel  { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; }
+.theme-muted  { color: var(--muted); }
+.theme-link   { color: var(--primary); }
+.theme-border { border-color: var(--border); }
+
+.theme-input {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--fg);
+}
+.theme-input::placeholder { color: color-mix(in oklab, var(--muted) 80%, var(--fg)); }
+.theme-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--primary) 25%, transparent);
+}
+
+.theme-btn {
+  background: var(--primary);
+  color: white;
+}
+.theme-btn:hover { filter: brightness(0.95); }
